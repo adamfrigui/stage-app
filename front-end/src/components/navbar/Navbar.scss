@@ -1,0 +1,89 @@
+.navbar {
+    height: 50px;
+    border-bottom: 0.5px solid rgb(221, 221, 221);
+    display: flex;
+    font-size: 14px;
+    color: #555;
+
+    .wrapper {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%; //for the justify content
+
+        .search {
+            display: flex;
+            align-items: center;
+            border: 0.5px solid lightgray;
+            padding: 3px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
+            &:hover{
+                background-color: rgb(238, 236, 236);
+                transition: 0.5s ;
+            }
+
+        }
+        .items {
+            display: flex;
+            align-items: center;
+            .item{
+                display: flex;
+                margin-right: 20px;     
+                position: relative;     
+                .icon{
+                    font-size: 20px;
+                    cursor: pointer;
+                }     
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                .counter{
+                    width: 15px;
+                    height: 15px;
+                    background: red;
+                    border-radius: 50%;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 9px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                }
+                &.abcd{
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        .wrapper{
+            justify-content: center;
+        }
+    }
+    .search{
+        display: none !important;
+    }
+}
